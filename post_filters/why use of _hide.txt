@@ -1,0 +1,15 @@
+
+To globally do this in httpd.conf
+
+<Files "*_hide.php">
+        Order deny,allow
+        Deny from all
+</Files>
+
+<Files "*_hide.py">
+        Order deny,allow
+        Deny from all
+</Files>
+
+So that files can be included by other files, 
+but cannot be directly called from a client's browser, etc.
